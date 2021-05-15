@@ -7,6 +7,7 @@ import {Title} from "../Card/styled";
 import Button from "../Button/Button";
 import {COLOR_DARK, COLOR_WHITE} from "../../../constants/variable";
 import CardList from "../CardList/CardList";
+import TokensCarddList from "./components/TokensCarddList/TokensCarddList"
 
 export default function CardBalance({children, title, balance}) {
   const [open, setOpen] = useState()
@@ -28,7 +29,8 @@ export default function CardBalance({children, title, balance}) {
             <Balance layoutId={"Balance-1"} money={balance}/>
           </RightWrapper>
           <CardList>
-
+            <Button color={COLOR_DARK}>Последнии поступления</Button>
+            <TokensCarddList></TokensCarddList>
           </CardList>
           <Button background={COLOR_WHITE} color={COLOR_DARK} onClick={() => {
             setOpen(false)
