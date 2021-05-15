@@ -1,5 +1,12 @@
 import styled from "styled-components"
-import {COLOR_LIGHTER_GRAY, COLOR_WHITE, SHADOW_BIG, SHADOW_STANDART} from "../../constants/variable";
+import {
+  COLOR_LIGHTER_GRAY,
+  COLOR_WHITE,
+  COLOR_YELLOW,
+  SHADOW_BIG,
+  SHADOW_SMALL,
+  SHADOW_STANDART
+} from "../../constants/variable";
 import {motion} from "framer-motion";
 
 export const SpecialButtonTitle = styled.span`
@@ -35,7 +42,7 @@ export const SpecialButton = styled(motion.button)`
   }
 `
 export const Wrapper = styled(motion.div)`
-  background-color: ${COLOR_LIGHTER_GRAY};
+  background-color: ${COLOR_YELLOW};
   height: 100vh;
   width: 100%;
   position: relative;
@@ -66,6 +73,7 @@ export const ButtonWrapper = styled.div`
     transform: rotate(-7deg) translateY(50%);
     box-shadow: ${SHADOW_STANDART};
     z-index: -1;
+    box-shadow: inset ${SHADOW_SMALL};
   }
 
   position: relative;

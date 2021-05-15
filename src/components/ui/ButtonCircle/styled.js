@@ -9,6 +9,7 @@ export const BaseButtonCircle = styled(motion.button)`
   height: 60px;
   width: 60px;
   font-family: "Montserrat", "Roboto", sans-serif;
+  border-radius: 50%;
   
   ${props => (props.color && `
     color: ${props.color};
