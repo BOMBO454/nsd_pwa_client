@@ -1,5 +1,5 @@
 import {Wrapper, LogoWrapper, ButtonWrapper} from "./styled";
-import Button from "../../components/Button/Button";
+import Button from "../../components/ui/Button/Button";
 import {COLOR_WHITE} from "../../constants/variable";
 import { useHistory } from "react-router-dom";
 

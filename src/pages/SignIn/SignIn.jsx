@@ -1,6 +1,5 @@
 import {ButtonWrapper, LogoWrapper, Wrapper} from "../Home/styled";
-import Button from "../../components/Button/Button";
-import {COLOR_WHITE} from "../../constants/variable";
+import Button from "../../components/ui/Button/Button";
 import {useHistory} from "react-router-dom";
 
 function SignIn() {
