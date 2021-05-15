@@ -1,7 +1,7 @@
-import {Wrapper , StyledList, StyledListItem} from "./styled";
+import {Wrapper , StyledList, StyledListItem, StyledBody} from "./styled";
 import {AnimatePresence, motion} from 'framer-motion'
 import {useEffect, useState} from "react";
-import {COLOR_DARK, COLOR_WHITE} from "../../../constants/variable";
+import {COLOR_LIGHT_GRAY, COLOR_WHITE} from "../../../constants/variable";
 
 export default function Tabs({tabs, defaultIndex = 0}) {
   const [activeTabIndex, setActiveTabIndex] = useState(defaultIndex);
@@ -14,9 +14,10 @@ export default function Tabs({tabs, defaultIndex = 0}) {
       <StyledList>
         {tabs.map((tab, index) => (
           <StyledListItem
+            active={index===activeTabIndex}
             key={tab.id}
             initial={{backgroundColor: COLOR_WHITE}}
-            whileTap={{backgroundColor: COLOR_DARK}}
+            whileTap={{scale:1.05}}
             onClick={() => {
               setActiveTabIndex(index)
             }}
@@ -25,9 +26,11 @@ export default function Tabs({tabs, defaultIndex = 0}) {
           </StyledListItem>
         ))}
       </StyledList>
-      <AnimatePresence exitBeforeEnter>
-        {localTab[activeTabIndex]}
-      </AnimatePresence>
+      <StyledBody>
+        <AnimatePresence exitBeforeEnter>
+          {localTab[activeTabIndex]}
+        </AnimatePresence>
+      </StyledBody>
     </Wrapper>
   )
 }

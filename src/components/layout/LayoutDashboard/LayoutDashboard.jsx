@@ -1,11 +1,11 @@
 import Header from "../../ui/Header/Header";
-import {Main} from "./styled";
+import {Main,Wrapper} from "./styled";
 
 export default function LayoutDashboard({children}){
-  return(<div>
+  return(<Wrapper>
     <Header />
     <Main>
       {children}
     </Main>
-  </div>)
+  </Wrapper>)
 }

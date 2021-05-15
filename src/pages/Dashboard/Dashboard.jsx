@@ -15,35 +15,39 @@ function Dashboard() {
   return (
     <LayoutDashboard>
       <CardList>
-        <CardBalance />
+        <CardBalance/>
         <Tabs tabs={[
-          {title:"Все",content:<div>Все</div>},{title:"Sent",content:<div>Sent</div>},{title:"Recieved",content:<div>Recieved</div>}
+          {
+            title: "Все", content: <CardList>
+              <CentredCard title="В обращении">
+                <VerticalWrapper>
+                  <p>
+                    <BigLetter>N</BigLetter> токенов
+                  </p>
+                  <p>
+                    на <BigLetter>m</BigLetter> ₽
+                  </p>
+                </VerticalWrapper>
+              </CentredCard>
+              <Heading>Купили сегодня</Heading>
+              <MiniCard title="ООО Синт">
+                <p>0.2910</p>
+                <p>+ 120 ₽</p>
+              </MiniCard>
+              <MiniCard title="ООО Синт">
+                <p>0.2910</p>
+                <p>+ 120 ₽</p>
+              </MiniCard>
+              <MiniCard title="ООО Синт">
+                <p>0.2910</p>
+                <p>+ 120 ₽</p>
+              </MiniCard>
+              <Button>Сумма которую купили</Button>
+              <Button>Создать токен</Button>
+            </CardList>
+          }, {title: "Sent", content: <div>Sent</div>}, {title: "Recieved", content: <div>Recieved</div>}
         ]}/>
-        <CentredCard title="В обращении">
-          <VerticalWrapper>
-            <p>
-              <BigLetter>N</BigLetter> токенов
-            </p>
-            <p>
-              на <BigLetter>m</BigLetter> ₽
-            </p>
-          </VerticalWrapper>
-        </CentredCard>
-        <Heading>Купили сегодня</Heading>
-        <MiniCard title="ООО Синт">
-          <p>0.2910</p>
-          <p>+ 120 ₽</p>
-        </MiniCard>
-        <MiniCard title="ООО Синт">
-          <p>0.2910</p>
-          <p>+ 120 ₽</p>
-        </MiniCard>
-        <MiniCard title="ООО Синт">
-          <p>0.2910</p>
-          <p>+ 120 ₽</p>
-        </MiniCard>
-        <Button>Сумма которую купили</Button>
-        <Button>Создать токен</Button>
+
       </CardList>
     </LayoutDashboard>
   );
