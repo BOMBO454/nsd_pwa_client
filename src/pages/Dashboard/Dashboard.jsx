@@ -42,7 +42,7 @@ function Dashboard() {
           <p>0.2910</p>
           <p>+ 120 ₽</p>
         </MiniCard>
-        <CentredCard title="Сумма которую купили"></CentredCard>
+        <Button>Сумма которую купили</Button>
         <Button>Создать токен</Button>
       </CardList>
     </LayoutDashboard>
