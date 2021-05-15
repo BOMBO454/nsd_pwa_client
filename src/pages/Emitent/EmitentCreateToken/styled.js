@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {Label} from "../../components/ui/Input/styled";
+import {Label} from "../../../components/ui/Input/styled";
 
 export const Form = styled.form`
   ${Label}{

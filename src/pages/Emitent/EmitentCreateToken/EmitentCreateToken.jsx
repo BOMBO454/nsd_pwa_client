@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
-import LayoutDashboard from "../../components/layout/LayoutDashboard/LayoutDashboard"
 import TokenTitle from './components/TokenTitle/TokenTitle'
-import Input from "../../components/ui/Input/Input";
-import Button from "../../components/ui/Button/Button";
 import {Form} from "./styled"
+import Input from "../../../components/ui/Input/Input";
+import LayoutDashboard from "../../../components/layout/LayoutDashboard/LayoutDashboard";
+import Button from "../../../components/ui/Button/Button";
 
-function CreateToken() {
+function EmitentCreateToken() {
     const [value1, setValue1] = useState('');
     function handleChange1(event) {
         setValue1(event.target.value);
@@ -55,4 +55,4 @@ function CreateToken() {
 }
 
 
-export default CreateToken
+export default EmitentCreateToken

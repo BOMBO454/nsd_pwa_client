@@ -1,7 +1,7 @@
 import Button from "src/components/ui/Button/Button";
 import CardList from "src/components/ui/CardList/CardList";
-import LayoutDashboard from "../../components/layout/LayoutDashboard/LayoutDashboard";
-import CardBalance from "../../components/ui/CardBalance/CardBalance";
+import LayoutDashboard from "../../../components/layout/LayoutDashboard/LayoutDashboard";
+import CardBalance from "../../../components/ui/CardBalance/CardBalance";
 import {
   VerticalWrapper,
   BigLetter,
@@ -9,9 +9,9 @@ import {
   Heading,
   MiniCard,
 } from "./styled";
-import Tabs from "../../components/ui/Tabs/Tabs";
+import Tabs from "../../../components/ui/Tabs/Tabs";
 
-function Dashboard() {
+function EmitentDashboard() {
   return (
     <LayoutDashboard>
       <CardList>
@@ -52,4 +52,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard
+export default EmitentDashboard

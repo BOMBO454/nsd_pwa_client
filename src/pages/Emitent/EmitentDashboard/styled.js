@@ -1,6 +1,6 @@
 import { Title } from "src/components/ui/Card/styled";
 import styled from "styled-components";
-import Card from "../../components/ui/Card/Card";
+import Card from "../../../components/ui/Card/Card";
 
 export const CentredCard = styled(Card)`
   ${Title} {

@@ -1,6 +1,7 @@
 import {Wrapper, LogoWrapper, ButtonWrapper, SpecialButton, SpecialButtonTitle} from "./styled";
 import { useHistory } from "react-router-dom";
 import Logo from "../../images/icons/Logo.svg"
+import paths from "../../constants/paths";
 function Home({key}) {
   let history = useHistory();
   return(
@@ -10,11 +11,11 @@ function Home({key}) {
       </LogoWrapper>
       <ButtonWrapper>
         <SpecialButtonTitle>
-         <SpecialButton whileTap={{scale:0.95}} onClick={()=>{history.push("/signin")}} />
+         <SpecialButton whileTap={{scale:0.95}} onClick={()=>{history.push(paths.traider)}} />
           Трейдер
         </SpecialButtonTitle>
         <SpecialButtonTitle>
-          <SpecialButton color={"#D2D2D2"} whileTap={{scale:0.95}} onClick={()=>{history.push("/signup")}} />
+          <SpecialButton color={"#D2D2D2"} whileTap={{scale:0.95}} onClick={()=>{history.push(paths.emitent)}} />
           Эмитент
         </SpecialButtonTitle>
       </ButtonWrapper>
