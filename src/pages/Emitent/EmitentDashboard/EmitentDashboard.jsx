@@ -10,8 +10,12 @@ import {
   MiniCard,
 } from "./styled";
 import Tabs from "../../../components/ui/Tabs/Tabs";
+import {COLOR_YELLOW} from "../../../constants/variable";
+import paths from "../../../constants/paths";
+import {useHistory} from "react-router-dom";
 
 function EmitentDashboard() {
+  const history = useHistory()
   return (
     <LayoutDashboard>
       <CardList>
@@ -43,10 +47,10 @@ function EmitentDashboard() {
                 <p>+ 120 ₽</p>
               </MiniCard>
               <Button>Сумма которую купили</Button>
-              <Button>Создать токен</Button>
             </CardList>
           }, {title: "Sent", content: <div>Sent</div>}, {title: "Recieved", content: <div>Recieved</div>}
         ]}/>
+        <Button background={COLOR_YELLOW} onClick={()=>{history.push(paths.emitentTokenCreate)}}>Создать токен</Button>
       </CardList>
     </LayoutDashboard>
   );

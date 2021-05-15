@@ -1,9 +1,9 @@
 import {YellowCardWrapper} from "./styled";
 import {Title} from "../../../Title/style";
 
-export default function YellowCard() {
+export default function YellowCard({className}) {
   return (
-    <YellowCardWrapper>
+    <YellowCardWrapper className={className}>
       <div className="d-flex justify-content-between mb-1">
         <Title>Облигация</Title>
         <span>100₽</span>

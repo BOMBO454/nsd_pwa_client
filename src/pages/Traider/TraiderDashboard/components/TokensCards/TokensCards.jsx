@@ -3,6 +3,7 @@ import {Title} from "../../../../../components/ui/Title/style";
 import Tabs from "../../../../../components/ui/Tabs/Tabs";
 import TokenCard from "../../../../../components/ui/TokenCard/TokenCard";
 import CardList from "../../../../../components/ui/CardList/CardList";
+import TokenCardSuper from "../../../../../components/ui/TokenCardSuper/TokenCardSuper";
 
 export default function TokensCards() {
   return (
@@ -18,16 +19,17 @@ export default function TokensCards() {
       }, {
         title: "Избранное",
         content: <CardList>
-          <TokenCard trand={20} />
-          <TokenCard trand={-20}/>
+          <TokenCardSuper />
+          <TokenCardSuper />
+          <TokenCardSuper />
         </CardList>
       }, {
         title: "Рекомендации",
         content: <CardList>
-          <TokenCard trand={20} />
-          <TokenCard trand={-20}/>
-          <TokenCard trand={-20}/>
-          <TokenCard trand={19}/>
+          <TokenCardSuper />
+          <TokenCardSuper />
+          <TokenCardSuper />
+          <TokenCardSuper />
         </CardList>
       }]}/>
     </>

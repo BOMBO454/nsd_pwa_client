@@ -4,8 +4,12 @@ import {Form} from "./styled"
 import Input from "../../../components/ui/Input/Input";
 import LayoutDashboard from "../../../components/layout/LayoutDashboard/LayoutDashboard";
 import Button from "../../../components/ui/Button/Button";
+import {COLOR_YELLOW} from "../../../constants/variable";
+import YellowCard from "../../../components/ui/TokenCardSuper/components/YellowCard/YellowCard";
+import ModalNewTokenHasCreated from "../../../components/modals/ModalNewTokenHasCreated/ModalNewTokenHasCreated";
 
 function EmitentCreateToken() {
+    const [open, setOpen] = useState(false);
     const [value1, setValue1] = useState('');
     function handleChange1(event) {
         setValue1(event.target.value);
@@ -38,6 +42,7 @@ function EmitentCreateToken() {
     return (
         <LayoutDashboard>
             <TokenTitle/>
+            <YellowCard className="mb-5"/>
             <Form>
                 <Input title="Тип" value={value1} onChange={handleChange1}/>
                 <div className="row">
@@ -48,8 +53,9 @@ function EmitentCreateToken() {
                 <Input title="Цена за еденицу" value={value5} onChange={handleChange5}/>
                 <Input title="Процентная ставка" value={value6} onChange={handleChange6}/>
                 <Input title="Дата погашения" value={value7} onChange={handleChange7}/>
-                <Button color="white">Создать</Button>
             </Form>
+            <Button background={COLOR_YELLOW} onClick={()=>{setOpen(true)}}>Создать</Button>
+            <ModalNewTokenHasCreated open={open} onHide={()=>{setOpen(false)}}/>
         </LayoutDashboard>
     )
 }
