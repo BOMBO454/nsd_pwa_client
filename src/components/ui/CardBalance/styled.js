@@ -18,6 +18,7 @@ export const WrapperCardAbsolute = styled(Card)`
   left: 20px;
   right: 20px;
   bottom: 20px;
+  overflow: auto;
   z-index: 2;
   background-image: ${GRADIENT_BASE};
   color: ${COLOR_DARK};
