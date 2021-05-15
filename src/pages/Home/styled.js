@@ -8,6 +8,7 @@ import {
   SHADOW_STANDART
 } from "../../constants/variable";
 import {motion} from "framer-motion";
+import {Title} from "../../components/ui/Title/style";
 
 export const SpecialButtonTitle = styled.span`
   text-transform: uppercase;
@@ -28,6 +29,9 @@ export const SpecialButton = styled(motion.button)`
   display: flex;
   align-items: center;
   justify-content: center;
+  ${props => props.color && `
+    background-color: ${props.color}; 
+  `}
 
   &::before {
     content: "";
@@ -36,9 +40,7 @@ export const SpecialButton = styled(motion.button)`
     height: 88px;
     background-color: #767676;
     border-radius: 50%;
-    ${props => props.color && `
-      background-color: ${props.color}; 
-    `}
+    background-color: ${COLOR_YELLOW};
   }
 `
 export const Wrapper = styled(motion.div)`
@@ -51,10 +53,18 @@ export const Wrapper = styled(motion.div)`
 `;
 
 export const LogoWrapper = styled.div`
+  padding: 30px 10px 0;
   display: flex;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  
+  ${Title}{
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 
   img {
     max-width: 200px;
@@ -71,6 +81,10 @@ export const ButtonWrapper = styled.div`
     width: 200%;
     position: absolute;
     transform: rotate(-7deg) translateY(50%);
+    transition: 0.2s ease-out;
+    ${props=>props.state===1&&`
+      transform: rotate(7deg) translateY(50%);
+    `}
     box-shadow: ${SHADOW_STANDART};
     z-index: -1;
     box-shadow: inset ${SHADOW_SMALL};
@@ -78,7 +92,7 @@ export const ButtonWrapper = styled.div`
 
   position: relative;
   overflow: hidden;
-  height: 300px;
+  height: 200px;
   bottom: 0;
   left: 0;
   width: 100%;

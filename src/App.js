@@ -17,6 +17,7 @@ import TraiderDashboard from "./pages/Traider/TraiderDashboard/TraiderDashboard"
 import TraiderTokenInfo from "./pages/Traider/TraiderTokenInfo/TraiderTokenInfo";
 import TraiderTokenList from "./pages/Traider/TraiderTokenList/TraiderTokenList";
 import UserSettings from "./pages/UserSettings/UserSettings";
+import TraiderTokenListSell from "./pages/Traider/TraiderTokenListSell/TraiderTokenListSell";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
 
           <Route exact path={paths.traider} component={TraiderDashboard} />
           <Route exact path={paths.traiderTokensList} component={TraiderTokenList} />
+          <Route exact path={paths.traiderTokensListSell} component={TraiderTokenListSell} />
           <Route exact path={paths.traiderTokenInfo} component={TraiderTokenInfo} />
 
           <Route exact path={paths.settings} component={UserSettings} />

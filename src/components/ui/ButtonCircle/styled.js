@@ -1,5 +1,5 @@
 import styled, {css} from "styled-components"
-import {COLOR_DARK} from "../../../constants/variable";
+import {COLOR_DARK, COLOR_WHITE, COLOR_YELLOW} from "../../../constants/variable";
 import { motion } from "framer-motion"
 
 export const BaseButtonCircle = styled(motion.button)`
@@ -10,6 +10,15 @@ export const BaseButtonCircle = styled(motion.button)`
   width: 60px;
   font-family: "Montserrat", "Roboto", sans-serif;
   border-radius: 50%;
+  padding: 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${props=>props.background?props.background:COLOR_YELLOW};
+  
+  svg{
+  }
   
   ${props => (props.color && `
     color: ${props.color};

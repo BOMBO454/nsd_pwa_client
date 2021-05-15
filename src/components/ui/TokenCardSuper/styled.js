@@ -29,7 +29,6 @@ export const GrayCard = styled(motion.div)`
   ${BaseButtonCircle}{
     height: 50px;
     width: 50px;
-    background-color: ${COLOR_YELLOW};
     color: ${COLOR_WHITE};
   }
 `

@@ -15,6 +15,7 @@ export default function TraiderDashboard() {
       <CardList>
         <CardBalance balance={9000} />
         <TokensCards />
+        <Button background={COLOR_YELLOW} onClick={()=>{history.push(paths.traiderTokensListSell)}}>Продажа</Button>
         <Button background={COLOR_YELLOW} onClick={()=>{history.push(paths.traiderTokensList)}}>Все токены</Button>
       </CardList>
     </LayoutDashboard>

@@ -25,6 +25,7 @@ export const FooterWrapper = styled.header`
   background-color: ${COLOR_WHITE};
   box-shadow: ${SHADOW_STANDART};
   bottom: 0;
+  z-index: 2;
   left: 0;
   width: 100%;
   height: 60px;

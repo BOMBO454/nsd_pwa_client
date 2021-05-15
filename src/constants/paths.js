@@ -10,6 +10,7 @@ const paths = {
   traider: "/traider/dashboard",
   traiderTokenInfo: "/traider/token-info",
   traiderTokensList: "/traider/tokens-list",
+  traiderTokensListSell: "/traider/tokens-sell",
 
   settings: "/user/settings",
 }
