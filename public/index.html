@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#FF0000" />
+    <meta name="theme-color" content="#FFD90F" />
     <meta
       name="description"
       content="Web site created using create-react-app"
@@ -20,15 +20,13 @@
       }
       .App {
         text-align: center;
-      }
-      .App-header {
-        background-color: #222;
-        height: 150px;
-        padding: 20px;
-        color: white;
-      }
-      .App-intro {
-        font-size: large;
+        background-color: #FFD90F;
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        color: #434343;
       }
     </style>
   </head>
@@ -36,12 +34,8 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
       <div class="App">
-        <div class="App-header">
-          <h2>Home</h2>
-        </div>
-        <p class="App-intro">
           Loading site...
-        </p>
+      </div>
     </div>
     <script>
       if ('serviceWorker' in navigator) {

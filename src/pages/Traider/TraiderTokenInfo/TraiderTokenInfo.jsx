@@ -1,6 +1,5 @@
 // import {} from "./styled";
 import LayoutDashboard from "../../../components/layout/LayoutDashboard/LayoutDashboard";
-import TokenCardSuper from "../../../components/ui/TokenCardSuper/TokenCardSuper";
 import YellowCard from "../../../components/ui/TokenCardSuper/components/YellowCard/YellowCard";
 import {Title} from "../../../components/ui/Title/style";
 import CardList from "../../../components/ui/CardList/CardList";
@@ -8,7 +7,6 @@ import Input from "../../../components/ui/Input/Input";
 import Button from "../../../components/ui/Button/Button";
 import {COLOR_YELLOW} from "../../../constants/variable";
 import ModalBuy from "../../../components/modals/ModalBuy/ModalBuy";
-import {Wrapper} from "../../../components/ui/TokenCardSuper/styled";
 import {useState} from "react";
 
 export default function TraiderTokenInfo() {
