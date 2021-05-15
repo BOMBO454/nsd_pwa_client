@@ -7,8 +7,12 @@ import CardList from "../../../components/ui/CardList/CardList";
 import Input from "../../../components/ui/Input/Input";
 import Button from "../../../components/ui/Button/Button";
 import {COLOR_YELLOW} from "../../../constants/variable";
+import ModalBuy from "../../../components/modals/ModalBuy/ModalBuy";
+import {Wrapper} from "../../../components/ui/TokenCardSuper/styled";
+import {useState} from "react";
 
 export default function TraiderTokenInfo() {
+  const [open, setOpen] = useState(false)
   return (
     <LayoutDashboard>
       <YellowCard />
@@ -28,7 +32,8 @@ export default function TraiderTokenInfo() {
         <Input title="Контактные данные" value="impuls@gmail.com"/>
         <Input title="Надёжность" value="5"/>
       </CardList>
-      <Button background={COLOR_YELLOW}>Купить</Button>
+      <Button onClick={()=>{setOpen(true)}} background={COLOR_YELLOW}>Купить</Button>
+      <ModalBuy open={open} onHide={()=>{setOpen(false)}}/>
     </LayoutDashboard>
   )
 }

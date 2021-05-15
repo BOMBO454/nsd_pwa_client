@@ -9,9 +9,7 @@ import {useHistory} from "react-router-dom";
 import {Modal} from "react-bootstrap";
 import paths from "../../../constants/paths";
 import YellowCard from "./components/YellowCard/YellowCard";
-import ModalBuy from "../../../images/icons/ModalBuy.svg";
-import Button from "../Button/Button";
-import {COLOR_YELLOW} from "../../../constants/variable";
+import ModalBuy from "../../modals/ModalBuy/ModalBuy";
 
 export default function TokenCardSuper({id}) {
   const history = useHistory()
@@ -23,13 +21,7 @@ export default function TokenCardSuper({id}) {
         <ButtonCircle onClick={()=>{history.push(paths.traiderTokenInfo)}}><AsqIcon /></ButtonCircle>
         <ButtonCircle onClick={()=>{setOpen(true)}}><MoneyIcon /></ButtonCircle>
       </GrayCard>
-      <Modal show={open} onHide={()=>{setOpen(false)}}>
-        <Title className="text-center">Подтвердить покупку</Title>
-        <div className="d-flex justify-content-center">
-          <img src={ModalBuy} alt=""/>
-        </div>
-        <Button background={COLOR_YELLOW}>Подтвердить</Button>
-      </Modal>
+      <ModalBuy open={open} onHide={()=>{setOpen(false)}}/>
     </Wrapper>
   )
 }
