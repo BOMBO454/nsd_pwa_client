@@ -1,7 +1,7 @@
 import {Wrapper , StyledList, StyledListItem, StyledBody} from "./styled";
 import {AnimatePresence, motion} from 'framer-motion'
 import {useEffect, useState} from "react";
-import {COLOR_LIGHT_GRAY, COLOR_WHITE} from "../../../constants/variable";
+import {COLOR_WHITE} from "../../../constants/variable";
 
 export default function Tabs({tabs, defaultIndex = 0}) {
   const [activeTabIndex, setActiveTabIndex] = useState(defaultIndex);
