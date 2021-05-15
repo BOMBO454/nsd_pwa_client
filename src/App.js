@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import SignIn from "./pages/SignIn/SignIn";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import SignUp from "./pages/SignUp/SignUp";
+import CreateToken from "./pages/CreateToken/CreateToken"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/signin" component={SignIn} />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/create-token" component={CreateToken} />
         </Switch>
       </AnimatePresence>
     </BrowserRouter>
