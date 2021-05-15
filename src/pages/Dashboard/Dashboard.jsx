@@ -47,7 +47,6 @@ function Dashboard() {
             </CardList>
           }, {title: "Sent", content: <div>Sent</div>}, {title: "Recieved", content: <div>Recieved</div>}
         ]}/>
-
       </CardList>
     </LayoutDashboard>
   );

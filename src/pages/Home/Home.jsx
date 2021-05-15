@@ -1,16 +1,22 @@
-import {Wrapper, LogoWrapper, ButtonWrapper} from "./styled";
-import Button from "../../components/ui/Button/Button";
-import {COLOR_WHITE} from "../../constants/variable";
+import {Wrapper, LogoWrapper, ButtonWrapper, SpecialButton, SpecialButtonTitle} from "./styled";
 import { useHistory } from "react-router-dom";
-
+import Logo from "../../images/icons/Logo.svg"
 function Home({key}) {
   let history = useHistory();
   return(
     <Wrapper key={key} initial={{x:"-100%",opacity:0}} animate={{x:"0",opacity:1}} exit={{x:"-100%",opacity:0}} transition={{ease:"easeOut"}}>
-      <LogoWrapper />
+      <LogoWrapper>
+        <img src={Logo} alt=""/>
+      </LogoWrapper>
       <ButtonWrapper>
-        <Button onClick={()=>{history.push("/signin")}} background={false} color={COLOR_WHITE}>signin</Button>
-        <Button onClick={()=>{history.push("/signup")}} background={false} color={COLOR_WHITE}>signup</Button>
+        <SpecialButtonTitle>
+         <SpecialButton whileTap={{scale:0.95}} onClick={()=>{history.push("/signin")}} />
+          Трейдер
+        </SpecialButtonTitle>
+        <SpecialButtonTitle>
+          <SpecialButton color={"#D2D2D2"} whileTap={{scale:0.95}} onClick={()=>{history.push("/signup")}} />
+          Эмитент
+        </SpecialButtonTitle>
       </ButtonWrapper>
     </Wrapper>
   )
