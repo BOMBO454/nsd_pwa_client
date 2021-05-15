@@ -1,12 +1,12 @@
-import styled from "styled-components"
-import {motion} from "framer-motion";
+import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const Title = styled(motion.span)`
   font-size: 16px;
   font-weight: bold;
   display: inline-block;
   margin-bottom: 16px;
-`
+`;
 export const Wrapper = styled(motion.div)`
   position: relative;
   border-radius: 16px;
