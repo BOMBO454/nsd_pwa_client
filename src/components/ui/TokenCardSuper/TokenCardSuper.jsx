@@ -1,51 +1,35 @@
-import {Wrapper, Icon, BaseInfo, Trand, InfoTitle, YellowCard, GrayCard} from "./styled";
+import {Wrapper, GrayCard} from "./styled";
 import {AnimatePresence, AnimateSharedLayout} from "framer-motion";
 import {useState} from "react";
 import ButtonCircle from "../ButtonCircle/ButtonCircle";
 import {Title} from "../Title/style";
 import AsqIcon from "../../../images/icons/AsqIcon";
 import MoneyIcon from "../../../images/icons/MoneyIcon";
+import {useHistory} from "react-router-dom";
+import {Modal} from "react-bootstrap";
+import paths from "../../../constants/paths";
+import YellowCard from "./components/YellowCard/YellowCard";
+import ModalBuy from "../../../images/icons/ModalBuy.svg";
+import Button from "../Button/Button";
+import {COLOR_YELLOW} from "../../../constants/variable";
 
 export default function TokenCardSuper({id}) {
+  const history = useHistory()
   const [open, setOpen] = useState(false)
   return (
-    <AnimateSharedLayout type={"crossfade"}>
-      <Wrapper layoutId={`wrapper-${id}`}>
-        <YellowCard>
-          <div className="d-flex justify-content-between mb-1">
-            <Title>Облигация</Title>
-            <span>100₽</span>
-          </div>
-          <div className="d-flex justify-content-between mb-1">
-            <span>ООО “Импульс”</span>
-            <span>18%/год</span>
-          </div>
-          <div className="d-flex justify-content-between mb-1">
-            <span>1000 шт</span>
-            <span>16.05.2022</span>
-          </div>
-          <div className="d-flex justify-content-between mb-1">
-            <span>Надежность:</span>
-            <span>16.05.2022</span>
-          </div>
-          <p>
-            Описание: Облигации сроком на
-            год целью получения 2 259 000руб. на дальнейшее развитие проекта
-          </p>
-        </YellowCard>
-        <GrayCard>
-          <ButtonCircle><AsqIcon /></ButtonCircle>
-          <ButtonCircle><MoneyIcon /></ButtonCircle>
-        </GrayCard>
-      </Wrapper>
-      <AnimatePresence>
-        {open && <Wrapper layoutId={`wrapper-${id}`}>
-          <Icon/>
-          <BaseInfo>
-            <InfoTitle>MTN Mobile Money</InfoTitle>
-            <span>Sat, 6 Jun 20 at 21:29</span>
-          </BaseInfo>
-        </Wrapper>}
-      </AnimatePresence>
-    </AnimateSharedLayout>)
+    <Wrapper>
+      <YellowCard />
+      <GrayCard>
+        <ButtonCircle onClick={()=>{history.push(paths.traiderTokenInfo)}}><AsqIcon /></ButtonCircle>
+        <ButtonCircle onClick={()=>{setOpen(true)}}><MoneyIcon /></ButtonCircle>
+      </GrayCard>
+      <Modal show={open} onHide={()=>{setOpen(false)}}>
+        <Title className="text-center">Подтвердить покупку</Title>
+        <div className="d-flex justify-content-center">
+          <img src={ModalBuy} alt=""/>
+        </div>
+        <Button background={COLOR_YELLOW}>Подтвердить</Button>
+      </Modal>
+    </Wrapper>
+  )
 }
