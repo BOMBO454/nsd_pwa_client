@@ -11,12 +11,12 @@ import paths from "../../../constants/paths";
 import YellowCard from "./components/YellowCard/YellowCard";
 import ModalBuy from "../../modals/ModalBuy/ModalBuy";
 
-export default function TokenCardSuper({id}) {
+export default function TokenCardSuper({id,TokenTypeId,name,price,procent,emisson,dateEnd}) {
   const history = useHistory()
   const [open, setOpen] = useState(false)
   return (
     <Wrapper>
-      <YellowCard />
+      <YellowCard TokenTypeId={TokenTypeId} name={name} price={price} procent={procent} emisson={emisson} dateEnd={dateEnd}/>
       <GrayCard>
         <ButtonCircle onClick={()=>{history.push(paths.traiderTokenInfo)}}><AsqIcon /></ButtonCircle>
         <ButtonCircle onClick={()=>{setOpen(true)}}><MoneyIcon /></ButtonCircle>

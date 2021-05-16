@@ -16,11 +16,11 @@ function Home({key}) {
     <Wrapper key={key} initial={{x:"-100%",opacity:0}} animate={{x:"0",opacity:1}} exit={{x:"-100%",opacity:0}} transition={{ease:"easeOut"}}>
       <LogoWrapper>
         <AnimatePresence exitBeforeEnter>
-          {state===2 && <><motion.img key={"EmitentImage"} src={EmitentImage} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}/>
+          {state===2 && <><motion.img alt={""} loading="lazy" key={"EmitentImage"} src={EmitentImage} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}/>
             <Title className="title1">Эмитент</Title>
             <p>юридическое лицо или орган государственной исполнительной или местной власти, который от своего имени и в рамках своей деятельности выпускает в обращение ценные бумаги или иные платежные средства.</p>
           </>}
-          {state===1 && <><motion.img key={"TrayderImage"} src={TrayderImage} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} />
+          {state===1 && <><motion.img alt={""} loading="lazy" key={"TrayderImage"} src={TrayderImage} initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}} />
             <Title className="title1">Трейдер</Title>
             <p>торговец, действующий по собственной инициативе и стремящийся извлечь прибыль непосредственно из процесса торговли.</p>
           </>}

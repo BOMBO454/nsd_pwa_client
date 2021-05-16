@@ -1,24 +1,24 @@
 import {YellowCardWrapper} from "./styled";
 import {Title} from "../../../Title/style";
 
-export default function YellowCard({className}) {
+export default function YellowCard({className,TokenTypeId=1,name,price="не указано",procent,emisson,dateEnd}) {
   return (
     <YellowCardWrapper className={className}>
       <div className="d-flex justify-content-between mb-1">
-        <Title>Облигация</Title>
-        <span>100₽</span>
+        <Title>{["Акция","Облигация"][TokenTypeId || 1]}</Title>
+        <span>{price}₽</span>
       </div>
       <div className="d-flex justify-content-between mb-1">
-        <span>ООО “Импульс”</span>
-        <span>18%/год</span>
+        <span>{name}</span>
+        <span>{procent}%/год</span>
       </div>
       <div className="d-flex justify-content-between mb-1">
-        <span>1000 шт</span>
-        <span>16.05.2022</span>
+        <span>{emisson} шт</span>
+        <span>{dateEnd}</span>
       </div>
       <div className="d-flex justify-content-between mb-1">
         <span>Надежность:</span>
-        <span>16.05.2022</span>
+        <span>4/5</span>
       </div>
     </YellowCardWrapper>
   )
